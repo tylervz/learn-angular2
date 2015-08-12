@@ -31,7 +31,7 @@ natively a lot of ES6+ features, and developers want to innovate on what Javascr
 they've gone to building these higher-level JS languages like AtScript, TypeScript, and tools like
 Babel that implement futuristic Javascript features and compile down to ES5.
 
-Dart is an experimental language created several years ago by Google that is natively supported in Chrome. We do not recommend using Dart as new JS features supersede it.
+Dart is an experimental language created several years ago by Google. We do not recommend using Dart as new JS features supersede it.
 
 AtScript was an experimental language created by Google to extend JS and Typescript with new
 features such as annotations and type introspection. It is now defunct.
