@@ -89,7 +89,7 @@ class StreetMap {
 
 ## Component Lifecycle
 
-Like `onInit`, we can track several events through the lifecycle of an component:
+Like `onInit`, we can track several events through the lifecycle of a component:
 
 ```javascript
 import {..., onInit, onDestroy, onChange, onCheck, onAllChangesDone} from 'angular2/angular2';
