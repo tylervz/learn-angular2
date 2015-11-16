@@ -58,4 +58,14 @@ To use event delegation, where an event on a child will bubble up to the parent,
   <button>I bubble up</button>
 </my-component>
 ```
+## `*`: The asterisk
 
+`*` is a way to tell a component that there will be an embed template based on the markup. So something like this:
+
+```html
+<my-component *ng-for="object in array">
+</my-component>>
+```
+
+This will create embedded template based on the markup, instead of rendering the item itself.
+This is the same for `*ngIf` or any custom bindings you could have
