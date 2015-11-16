@@ -8,7 +8,7 @@ tweet: "Understanding events in Angular 2"
 Events in Angular 2 use the parentheses notation in templates, and trigger methods in a component's class. For example, assume we have this component class:
 
 ```javascript
-@View(...)
+@Component(...)
 class MyComponent {
   clicked(event) {
   }
@@ -25,18 +25,7 @@ Our `clicked()` method will be called when the button is clicked.
 
 ## Delegation
 
-Events that have a caret (^) before the event name perform *event delegation*. This means they fire if a child triggers that event. In general, you'll want to use event delegation to make sure you are capturing events from all children:
-
-```html
-<div id="my-profile" (^click)="clicked($event)">
-  <div class="profile-image">
-  </div>
-  <div class="profile-text">
-  </div>
-</div>
-```
-
-Using event delegation, the `click` event will fire on `#my-profile` if any of the children are clicked. The event bubbles up.
+Events in angular two behave like normal DOM events. They can bubble up and propagate down. Nothing special to do here!
 
 ## Event object
 
@@ -49,7 +38,7 @@ To capture the event object, pass `$event` as a parameter in the event callback 
 This is an easy way to modify the event, such as calling `preventDefault`:
 
 ```javascript
-@View(...)
+@Component(...)
 class MyComponent {
   clicked(event) {
     event.preventDefault();
