@@ -28,7 +28,7 @@ Our `clicked()` method will be called when the button is clicked.
 Events that have a caret (^) before the event name perform *event delegation*. This means they fire if a child triggers that event. In general, you'll want to use event delegation to make sure you are capturing events from all children:
 
 ```html
-<div id="my-profie" (^click)="clicked($event)">
+<div id="my-profile" (^click)="clicked($event)">
   <div class="profile-image">
   </div>
   <div class="profile-text">
