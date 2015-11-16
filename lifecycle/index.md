@@ -5,7 +5,9 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/lifecycle/in
 tweet: "Lifecycle of an Angular 2 App"
 ---
 
-Angular apps go through a multi-stage bootstrap and lifecycle process, and we can 
+_Updated November 16, 2015_
+
+Angular apps go through a multi-stage bootstrap and lifecycle process, and we can
 respond to various events as our app starts, runs, and creates/destroys components.
 
 ## Bootstrap
@@ -16,13 +18,11 @@ In your main JS file for our app, we put this:
 
 ```javascript
 {% raw %}
-import {Component, View, bootstrap} from 'angular2/angular2';
+import {Component, bootstrap} from 'angular2/angular2';
 
 // Annotation section
 @Component({
-  selector: 'my-app'
-})
-@View({
+  selector: 'my-app',
   template: '<h1>Hello {{ name }}</h1>'
 })
 // Component controller
@@ -49,15 +49,13 @@ To do this, we can wait through a `setTimeout`, or use the recommended component
 `onInit`:
 
 ```javascript
-import {Component, View, bootstrap, onInit} from 'angular2/angular2';
+import {Component, bootstrap, onInit} from 'angular2/angular2';
 
 // Annotation section
 @Component({
   selector: 'street-map',
+  template: '<map-window></map-window><map-controls></map-controls>',
   lifecycle: [onInit]
-})
-@View({
-  template: '<map-window></map-window><map-controls></map-controls>'
 })
 // Component controller
 class StreetMap {
@@ -97,10 +95,8 @@ import {..., onInit, onDestroy, onChange, onCheck, onAllChangesDone} from 'angul
 // Annotation section
 @Component({
   selector: 'street-map',
+  template: '<map-window></map-window><map-controls></map-controls>',
   lifecycle: [onInit, onDestroy, onChange, onCheck, onAllChangesDone]
-})
-@View({
-  template: '<map-window></map-window><map-controls></map-controls>'
 })
 // Component controller
 class StreetMap {
