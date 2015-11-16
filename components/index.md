@@ -21,7 +21,7 @@ import {Component} from 'angular2/angular2'
 
 @Component({
   selector: 'my-component',
-  inline: "<div>Hello my name is {{name}}. <button (click)="sayMyName()">Say my name</button></div>"
+  inline: '<div>Hello my name is {{name}}. <button (click)="sayMyName()">Say my name</button></div>'
 })
 export class MyComponent {
   constructor() {
