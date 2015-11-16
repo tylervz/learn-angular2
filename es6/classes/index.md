@@ -15,6 +15,7 @@ class Beer {
 
 class SpottedCow extends Beer {
   constructor() {
+    super();
     this.deliciousness = 50;
     this.locations = 'Wisconsin';
     this.name = 'Spotted Cow';
@@ -28,6 +29,7 @@ class SpottedCow extends Beer {
 
 class MillerLite extends Beer {
   constructor() {
+    super();
     this.deliciousness = 10;
     this.locations = 'anywhere';
     this.name = 'Miller Lite';
@@ -43,7 +45,7 @@ class MillerLite extends Beer {
 
 let beer = new SpottedCow();
 
-console.log('I am drinking a delicious', beer.name, 'that is available', beer.location);
+console.log('I am drinking a delicious', beer.name, 'that is available', beer.locations);
 
 beer.sell();
 ```
