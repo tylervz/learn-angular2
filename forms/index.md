@@ -10,7 +10,7 @@ Forms are the cornerstone of any real app. In Angular 2, forms have changed quit
 Where we used to use `ngModel` and map to our internal data model, in Angular 2 we more explicitly build forms and form controls.
 
 While it feels like more code to write, in practice it's easier to reason about than with v1, and we no longer
-have to deal with frustrating ngModel and scope data problems.jjjj
+have to deal with frustrating ngModel and scope data problems.
 
 ## Simple Form
 
