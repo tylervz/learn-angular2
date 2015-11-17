@@ -10,19 +10,19 @@ Forms are the cornerstone of any real app. In Angular 2, forms have changed quit
 Where we used to use `ngModel` and map to our internal data model, in Angular 2 we more explicitly build forms and form controls.
 
 While it feels like more code to write, in practice it's easier to reason about than with v1, and we no longer
-have to deal with frustrating ngModel and scope data problems.
+have to deal with frustrating ngModel and scope data problems.jjjj
 
 ## Simple Form
 
 Let's start with a simple login form in HTML with Angular 2:
 
 ```html
-<form (^submit)="doLogin($event)" [control-group]="loginForm">
+<form [ng-form-model]="loginForm" (submit)="doLogin($event)">
   <div>
-    <input control="email" type="email" placeholder="Your email">
-  </div>
+    <input ng-control="email" type="email" placeholder="Your email">
   <div>
-    <input control="password" type="password" placeholder="Your password">
+  <div>
+    <input ng-control="password" type="password" placeholder="Your password">
   </div>
   <button type="submit">Log in</button>
 </form>
@@ -32,30 +32,21 @@ And the corresponding component JS:
 
 ```javascript
 
-import {Component, Template, Parent} from 'angular2/angular2'
-import {FormBuilder, Validators, FormDirectives, ControlGroup} from 'angular2/forms';
+import {Component, FormBuilder, Validators} from 'angular2/angular2'
 
 @Component({
-  selector: 'login-page'
-})
-@Template({
-  url: 'pages/login.html',
-  directives: [View, FormDirectives]
+  selector: 'login-page',
+  templateUrl: 'login-page.html'
 })
 export class LoginPage {
-  constructor() {
-    var fb = new FormBuilder()
-
+  constructor(fb: FormBuilder) {
     this.loginForm = fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ["", Validators.required],
+      password: ["", Validators.required]
     });
   }
-
   doLogin(event) {
-    // Show the value of the form
     console.log(this.loginForm.value);
-
     event.preventDefault();
   }
 }
@@ -82,7 +73,7 @@ this.loginForm = fb.group({
 
 ## ControlGroup
 
-The `FormBuilder` creates instances of `ControlGroup`, which we refer to as a `form`. 
+The `FormBuilder` creates instances of `ControlGroup`, which we refer to as a `form`.
 
 Instead of using the `FormBuilder`, we could also construct the `ControlGroup` manually:
 
@@ -97,11 +88,10 @@ In practice though, the `FormBuilder` is what we will use to quickly create form
 
 ## Form Directives
 
-You'll notice the lack of `ngModel` anywhere in our form. Instead, we have the `control` decorators that
-map certain inputs to our control objects:
+You'll notice the lack of `ngModel` anywhere in our form. Instead, we have the `ngControl` decorators that map certain inputs to our control objects:
 
 ```html
-  <input control="email" type="email" placeholder="Your email">
+  <input ng-control="email" type="email" placeholder="Your email">
 ```
 
 This "binds" the email input to the instance of our `email` control.
