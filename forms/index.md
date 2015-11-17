@@ -18,12 +18,8 @@ Let's start with a simple login form in HTML with Angular 2:
 
 ```html
 <form [ng-form-model]="loginForm" (submit)="doLogin($event)">
-  <div>
     <input ng-control="email" type="email" placeholder="Your email">
-  <div>
-  <div>
     <input ng-control="password" type="password" placeholder="Your password">
-  </div>
   <button type="submit">Log in</button>
 </form>
 ```
