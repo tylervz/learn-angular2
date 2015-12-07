@@ -51,13 +51,6 @@ To listen for an event on a component, we use the `()` stynax
 <my-component (click)="onClick($event)"></my-component>
 ```
 
-To use event delegation, where an event on a child will bubble up to the parent, use the `^` before the event name:
-
-```html
-<my-component (^click)="onClick($event)">
-  <button>I bubble up</button>
-</my-component>
-```
 ## `*`: The asterisk
 
 `*` is a way to tell a component that there will be an embed template based on the markup. So something like this:
