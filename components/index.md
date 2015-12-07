@@ -17,6 +17,7 @@ are combined into Components.
 Let's start with a very simple component that lists out our name:
 
 ```javascript
+{% raw %}
 import {Component} from 'angular2/angular2'
 
 @Component({
@@ -31,6 +32,7 @@ export class MyComponent {
     console.log('My name is', this.name)
   }
 }
+{% endraw %}
 ```
 
 When we use the `<my-component></my-component>` tag in our HTML, this component will be created,
