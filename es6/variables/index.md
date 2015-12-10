@@ -1,7 +1,7 @@
 ---
 layout: default
-title: ES6 Classes
-edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/es6/classes/index.md
+title: ES6 Variables
+edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/es6/variables/index.md
 tweet: "Understanding let and var in ES6"
 ---
 
