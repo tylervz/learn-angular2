@@ -17,9 +17,9 @@ have to deal with frustrating ngModel and scope data problems.
 Let's start with a simple login form in HTML with Angular 2:
 
 ```html
-<form [ng-form-model]="loginForm" (submit)="doLogin($event)">
-    <input ng-control="email" type="email" placeholder="Your email">
-    <input ng-control="password" type="password" placeholder="Your password">
+<form [ngFormModel]="loginForm" (submit)="doLogin($event)">
+    <input ngControl="email" type="email" placeholder="Your email">
+    <input ngControl="password" type="password" placeholder="Your password">
   <button type="submit">Log in</button>
 </form>
 ```
@@ -87,7 +87,7 @@ In practice though, the `FormBuilder` is what we will use to quickly create form
 You'll notice the lack of `ngModel` anywhere in our form. Instead, we have the `ngControl` decorators that map certain inputs to our control objects:
 
 ```html
-  <input ng-control="email" type="email" placeholder="Your email">
+  <input ngControl="email" type="email" placeholder="Your email">
 ```
 
 This "binds" the email input to the instance of our `email` control.
