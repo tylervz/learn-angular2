@@ -43,13 +43,12 @@ is where the whole app component chain gets created.
 
 When a component is created, its constructor is called. This is where we initialize state
 for our component, but if we rely on properties or data from child components, we need
-to wait for a digest period first.
+to wait for our child components to initialize first.
 
-To do this, we can wait through a `setTimeout`, or use the recommended component lifecycle event
-`onInit`:
+To do this, we can handle the `ngOnInit` lifecycle event. Optionally, we could call `setTimeout` in our constructor for a similar effect:
 
 ```javascript
-import {Component, bootstrap, onInit} from 'angular2/angular2';
+import {Component, bootstrap} from 'angular2/angular2';
 
 // Annotation section
 @Component({
