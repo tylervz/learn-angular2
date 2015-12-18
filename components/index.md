@@ -14,7 +14,7 @@ are combined into Components.
 
 ### A simple component
 
-Let's start with a very simple component that lists out our name:
+Here's a simple Component that renders our name, and a button that triggers a method to print our name to the console:
 
 ```javascript
 {% raw %}
