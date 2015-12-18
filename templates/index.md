@@ -29,19 +29,16 @@ My name is {{name}}
 {% endraw %}
 ```
 
-Pipes, previously known as "Filters," are still in the process of being fully implemented, but will function pretty
-much the same.
+Pipes, previously known as "Filters," transform a value into a new value, like localizing a string or converting a floating point value into a currency representation:
 
 ## `[]`: Binding properties
 
-To resolve and bind a variable to a component, use the `[]` syntax:
+To resolve and bind a variable to a component, use the `[]` syntax. If we have `this.currentVolume` in our component, we will pass this through
+to our component and the values will stay in sync:
 
 ```html
-<video-control [player]="myPlayer"></video-control>
+<video-control [volume]="currentVolume"></video-control>
 ```
-
-If the `<video-control>` component has declared the `player` property, it will be accessible in the instance
-of the component's class.
 
 ## `()`: Handling events
 
@@ -51,14 +48,24 @@ To listen for an event on a component, we use the `()` stynax
 <my-component (click)="onClick($event)"></my-component>
 ```
 
-## `*`: The asterisk
+## `[()]`: Two-way data binding
 
-`*` is a way to tell a component that there will be an embed template based on the markup. So something like this:
+To keep a binding up to date given user input and other events, use the `[()]` syntax. Think of it as a combination of handling an event and binding a property:
 
 ```html
-<my-component *ng-for="object in array">
+<input [(ngModel)]="myName">
+```
+
+The `this.myName` value of your component will stay in sync with the input value.
+
+## `*`: The asterisk
+
+`*` indicates that this directive treats this component as a template and will not draw it as-is. For example, `ngFor` takes our `<my-component>` and stamps it out for each `item` in `items`,
+but it never renders our initial `<my-component>` since it's a template:
+
+```html
+<my-component *ngFor="#item of items">
 </my-component>>
 ```
 
-This will create embedded template based on the markup, instead of rendering the item itself.
-This is the same for `*ngIf` or any custom bindings you could have
+Other similar directives that work on templates rather than rendered components are `*ngIf` and `*ngSwitch`.
