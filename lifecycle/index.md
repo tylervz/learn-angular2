@@ -54,18 +54,12 @@ import {Component, bootstrap, onInit} from 'angular2/angular2';
 // Annotation section
 @Component({
   selector: 'street-map',
-  template: '<map-window></map-window><map-controls></map-controls>',
-  lifecycle: [onInit]
+  template: '<map-window></map-window><map-controls></map-controls>'
 })
 // Component controller
 class StreetMap {
   constructor() {
     this.name = 'Max';
-
-    setTimeout(() => {
-      // Similar to onInit below, but not recommended.
-      // Could be useful in a pinch, though.
-    });
   }
 
   setMapWindow(mapWindow) {
@@ -76,7 +70,7 @@ class StreetMap {
     this.mapControls = mapControls;
   }
 
-  onInit() {
+  ngOnInit() {
     // Properties are resolved and things like
     // this.mapWindow and this.mapControls
     // had a chance to resolve from the
@@ -87,32 +81,30 @@ class StreetMap {
 
 ## Component Lifecycle
 
-Like `onInit`, we can track several events through the lifecycle of a component:
+Like `ngOnInit`, we can track several events through the lifecycle of a component. For a full
+list, see the official Angular 2 [Lifecyle Hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) docs.
 
 ```javascript
-import {..., onInit, onDestroy, onChange, onCheck, onAllChangesDone} from 'angular2/angular2';
-
 // Annotation section
 @Component({
   selector: 'street-map',
   template: '<map-window></map-window><map-controls></map-controls>',
-  lifecycle: [onInit, onDestroy, onChange, onCheck, onAllChangesDone]
 })
 // Component controller
 class StreetMap {
-  onInit() {
+  ngOnInit() {
     // Properties are resolved and things like
     // this.mapWindow and this.mapControls
     // had a chance to resolve from the
     // two child components <map-window> and <map-controls>
   }
-  onDestroy() {
+  ngOnDestroy() {
     // Speak now or forever hold your peace
   }
-  onCheck() {
-    // Called right after our bindings have been checked
+  ngDoCheck() {
+    // Custom change detection
   }
-  onChange(changes) {
+  ngOnChanges(changes) {
     // Called right after our bindings have been checked but only
     // if one of our bindings has changed.
     //
@@ -121,8 +113,17 @@ class StreetMap {
     //   'prop': PropertyUpdate
     // }
   }
-  onAllChangesDone() {
-    // Called right after all of our bindings have been checked
+  ngAfterContentInit() {
+    // Component content has been initialized
+  }
+  ngAfterContentChecked() {
+    // Component content has been Checked
+  }
+  ngAfterViewInit() {
+    // Component views are initialized
+  }
+  ngAfterViewChecked() {
+    // Component views have been checked
   }
 }
 ```
