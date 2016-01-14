@@ -65,7 +65,7 @@ but it never renders our initial `<my-component>` since it's a template:
 
 ```html
 <my-component *ngFor="#item of items">
-</my-component>>
+</my-component>
 ```
 
 Other similar directives that work on templates rather than rendered components are `*ngIf` and `*ngSwitch`.
