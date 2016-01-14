@@ -25,7 +25,7 @@ Our `clicked()` method will be called when the button is clicked.
 
 ## Delegation
 
-Events in angular two behave like normal DOM events. They can bubble up and propagate down. Nothing special to do here!
+Events in Angular 2 behave like normal DOM events. They can bubble up and propagate down. Nothing special to do here!
 
 ## Event object
 
