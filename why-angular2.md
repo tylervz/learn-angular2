@@ -17,12 +17,14 @@ years building our entire business on Angular. When Angular 2 was announced, we 
 
 What we found when we started building with Angular 2, though, was something beyond our wildest dreams: a faster, more powerful, cleaner, and easier to use tool than we had with Angular 1. We found a tool that embraced future web standards and brought ES6 to more developers around the world.
 
+In many ways, Angular 2 still felt like Angular, it was just based on new JavaScript standards and using best-practices developed in the years after the first Angular release. "Angular" had become a design pattern with multiple implementations.
+
 We realized that Angular 2 would make it *easier* to use Ionic, not harder. That it would give us performance gains
 we desperately needed to push forward our goal of making the web win on mobile. That it would make it easier to write clean, testable code that would run on more devices and platforms. That it would help us empower more web developers to build great mobile apps.
 
 We knew we had to work to make sure the ngCommunity transitioned from Angular 1 to Angular 2 as quickly and cleanly as possible, so we started this site to help with the transition.
 
-As Angular 2 moves from alpha to beta and beyond, we will be updating this site with new tutorials and examples. If you ever have a question or feel there is something we could expand, [tweet at us](http://twitter.com/ionicframework).
+As Angular 2 moves from beta to RC and beyond, we will be updating this site with new tutorials and examples. If you ever have a question or feel there is something we could expand, [tweet at us](http://twitter.com/ionicframework) or [file an issue](https://github.com/driftyco/learn-angular2).
 
 We hope you find Angular 2 as inspiring as we have, and we hope this guide helps you get there as quickly as possible.
 
