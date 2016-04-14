@@ -10,7 +10,7 @@ _Updated April 14, 2016_
 
 Components are the core of an Angular 2 app but most developers need to know how to pass data into components to dynamically configure them.
 
-### `@Input`
+#### `@Input`
 
 To define an input for a component, we use the `@Input` decorator.
 
