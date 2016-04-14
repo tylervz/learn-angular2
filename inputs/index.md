@@ -14,26 +14,26 @@ Components are the core of an Angular 2 app but most developers need to know how
 
 To define an input for a component, we use the `@Input` decorator.
 
-For example, our `<person-info>` component needs a `person` argument to render information about that person:
+For example, our `<user-profile>` component needs a `user` argument to render information about that user:
 
 ```html
 {% raw %}
-<person-info [person]="myContact">
+<user-profile [user]="currentUser"></user-profile>
 {% endraw %}
 ```
 
-So, we add an `@Input` binding to `person`:
+So, we add an `@Input` binding to `user`:
 
 ```javascript
 {% raw %}
 import {Component, Input} from 'angular2/core';
 
 @Component({
-  selector: 'person-info',
-  template: '<div>{{person}}</div>'
+  selector: 'user-profile',
+  template: '<div>{{user.name}}</div>'
 })
-export class PersonInfo {
-  @Input() person;
+export class UserProfile {
+  @Input() user;
   constructor() {}
 }
 {% endraw %}
