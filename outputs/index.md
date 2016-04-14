@@ -48,7 +48,7 @@ export class UserProfile {
 Now when we used this component elsewhere in our app, we can bind the event that `person-info` emits
 
 ```html
-  <user-profile (userUpdated)="logEvent($event)"></user-profile>
+  <user-profile (userUpdated)="userUpdated($event)"></user-profile>
 ```
 
 ```javascript
