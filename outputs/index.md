@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Inputs
+title: Outputs
 edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/outputs/index.md
 tweet: "Emit your own crazy even with Outputs in Angular 2"
 ---
