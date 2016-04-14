@@ -9,17 +9,16 @@ tweet: "Emit your own crazy even with Outputs in Angular 2"
 _Updated April 14, 2016_
 
 
-If you want to bind to particular event, you can use the new [Event syntax](/events) in Angular 2. But what if you need your own custom event?
+If you want to bind to particular event, you can use the new [Event syntax](/events) in Angular 2, but what if you need your own custom event?
 
-
-To create a custom event, we can use the new @Output decorator. Take the following component:
+To create a custom event, we can use the new `@Output` decorator. Take the following component:
 
 ```javascript
 import {Component} from 'angular2/core';
 
 @Component({
-  selector: 'person-info',
-  template: '<div>Hello</div>'
+  selector: 'user-profile',
+  template: '<div>Hi, my name is {{user.name}}</div>'
 })
 export class PersonInfo {
   constructor() {}
@@ -30,16 +29,18 @@ Let's import `Output` and `EventEmitter` and create our new event
 
 ```javascript
 import {Component, Output, EventEmitter} from 'angular2/core';
+
 @Component({
-  selector: 'person-info',
-  template: '<div>Hello</div>'
+  selector: 'user-profile',
+  template: '<div>Hi, my name is {{user.name}}</div>'
 })
-export class PersonInfo {
-  @Output() everySecond = new EventEmitter();
+export class UserProfile {
+  @Output() userUpdated = new EventEmitter();
+  
   constructor() {
-    setInterval(() => {
-      this.everySecond.emit('event');
-    }, 1000;
+    // Update user
+    // ...
+    this.userUpdated.emit(this.user);
   }
 }
 ```
@@ -47,14 +48,15 @@ export class PersonInfo {
 Now when we used this component elsewhere in our app, we can bind the event that `person-info` emits
 
 ```html
-  <person-info (everySecond)="logEvent($event)"></person-info>
+  <user-profile (userUpdated)="logEvent($event)"></user-profile>
 ```
 
 ```javascript
-export class MyClass {
+export class SettingsPage {
   constructor(){}
-  logEvent() {
-    console.log('second');
+  
+  userUpdated(user) {
+    // Handle the event
   }
 }
 ```
