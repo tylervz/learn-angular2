@@ -8,42 +8,21 @@ tweet: "Learn input properties in Angular 2"
 
 _Updated April 14, 2016_
 
-Components are the core of an Angular 2 app. With this, one question developers might have is how do I pass data down into my components.
-
-In Angular 1 we did this with a directive's scope. Take the follow directive:
-
-```javascript
-{% raw %}
-.controller("MainCtrl", function($scope){
-    $scope.name ="Ionitron"
-})
-
-.directive('personInfo', function(){
-    return{
-      restrict: "E",
-      scope: {
-        // make the binding dynamic
-        person: '='
-      },
-      template: '<div>{{person}}</div>'
-    }
-})
-{% endraw %}
-```
-
-We would use this in our template like so:
-
-```html
-<person-info person="name"></person-info>
-```
-
-Now the scope in our directive experts there to be a `person` property, and this will be a dynamic value from our controller.
+Components are the core of an Angular 2 app but most developers need to know how to pass data into components to dynamically configure them.
 
 ### `@Input`
 
-This has been update to a simpler syntax with Angular 2. Instead of using `scope`, we can define an `@Input` for our component.
+To define an input for a component, we use the `@Input` decorator.
 
-In this case, we want to define a `@Input` that will be called `person`
+For example, our `<person-info>` component needs a `person` argument to render information about that person:
+
+```html
+{% raw %}
+<person-info [person]="myContact">
+{% endraw %}
+```
+
+So, we add an `@Input` binding to `person`:
 
 ```javascript
 {% raw %}
@@ -58,21 +37,5 @@ export class PersonInfo {
   constructor() {}
 }
 {% endraw %}
-```
-
-Then when we want to use our component, we can use the following syntax.
-
-```html
-<person-info [person]="name"></person-info>
-```
-
-The `[person]` is a dynamic binding. So the value for `name` will come from our class.
-
-```javascript
-export class HomePage {
-  constructor() {
-    this.name = "Ionitron"
-  }
-}
 ```
 
