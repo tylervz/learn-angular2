@@ -6,7 +6,7 @@ tweet: "Access child components in Angular 2"
 ---
 
 
-_Updated April 18, 2016_
+_Updated April 28, 2016_
 
 Since all components in Angular 2 have classes, you might want to call methods on these classes. This requires access to the component.
 
@@ -47,6 +47,28 @@ export class MasterPage {
   // assign to a public property on our class
   // give it the type for our component
   @ViewChild(UserProfile) userProfile: UserProfile
+  constructor() { }
+  update(){
+    this.userProfile.sendData();
+  }
+}
+{% endraw %}
+```
+
+
+We can also do the same thing with a local variable.
+Instead of trying to load the particular class, we can do:
+
+```javascript
+{% raw %}
+import {Component, ViewChild} from 'angular2/core';
+import {UserProfile} from '../user-profile';
+@Component({
+  template: '<user-profile #myProfile (click)="update()"></user-profile>',
+  directives: [UserProfile]
+})
+export class MasterPage {
+  @ViewChild('myProfile') userProfile: UserProfile
   constructor() { }
   update(){
     this.userProfile.sendData();
