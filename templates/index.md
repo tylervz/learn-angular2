@@ -42,7 +42,7 @@ to our component and the values will stay in sync:
 
 ## `()`: Handling events
 
-To listen for an event on a component, we use the `()` stynax
+To listen for an event on a component, we use the `()` syntax
 
 ```html
 <my-component (click)="onClick($event)"></my-component>
