@@ -12,7 +12,7 @@ Since all components in Angular 2 have classes, you might want to call methods o
 
 #### `@ViewChild`
 
-To get access to a component and it's methods, we can use the `@ViewChild` annotation.
+To get access to a component and its methods, we can use the `@ViewChild` annotation.
 
 For example, our `<user-profile>` component can have a method called `sendData()`.
 
