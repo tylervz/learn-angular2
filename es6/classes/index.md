@@ -45,7 +45,7 @@ class MillerLite extends Beer {
 
 let beer = new SpottedCow();
 
-console.log('I am drinking a delicious', beer.name, 'that is available', beer.locations);
+console.log('I am drinking a delicious ', beer.name, ' that is available ', beer.locations);
 
 beer.sell();
 ```
