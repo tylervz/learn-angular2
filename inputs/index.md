@@ -26,7 +26,7 @@ So, we add an `@Input` binding to `user`:
 
 ```javascript
 {% raw %}
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'user-profile',
@@ -38,4 +38,3 @@ export class UserProfile {
 }
 {% endraw %}
 ```
-

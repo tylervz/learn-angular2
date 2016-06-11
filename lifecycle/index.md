@@ -18,7 +18,8 @@ In your main JS file for our app, we put this:
 
 ```javascript
 {% raw %}
-import {Component, bootstrap} from 'angular2/angular2';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { Component } from '@angular/core';
 
 // Annotation section
 @Component({

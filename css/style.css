@@ -84,3 +84,10 @@ h1 code, h2 code, h3 code, h4 code, h5 code{
 
   text-transform: none
 }
+
+#angular2-version {
+  font-style: italic;
+  font-size: 10px;
+  display: block;
+  margin: 8px 0;
+}

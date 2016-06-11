@@ -36,8 +36,9 @@ When use the `user-profile` on our main page, we can reference the class and the
 
 ```javascript
 {% raw %}
-import {Component, ViewChild} from 'angular2/core';
-import {UserProfile} from '../user-profile';
+import { Component, ViewChild } from '@angular/core';
+import { UserProfile } from '../user-profile';
+
 @Component({
   template: '<user-profile (click)="update()"></user-profile>',
   directives: [UserProfile]
@@ -47,6 +48,7 @@ export class MasterPage {
   // assign to a public property on our class
   // give it the type for our component
   @ViewChild(UserProfile) userProfile: UserProfile
+
   constructor() { }
   update(){
     this.userProfile.sendData();
@@ -61,8 +63,9 @@ Instead of trying to load the particular class, we can do:
 
 ```javascript
 {% raw %}
-import {Component, ViewChild} from 'angular2/core';
-import {UserProfile} from '../user-profile';
+import { Component, ViewChild } from '@angular/core';
+import { UserProfile } from '../user-profile';
+
 @Component({
   template: '<user-profile #myProfile (click)="update()"></user-profile>',
   directives: [UserProfile]
@@ -76,4 +79,3 @@ export class MasterPage {
 }
 {% endraw %}
 ```
-

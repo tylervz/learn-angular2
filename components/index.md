@@ -18,7 +18,7 @@ Here's a simple Component that renders our name, and a button that triggers a me
 
 ```javascript
 {% raw %}
-import {Component} from 'angular2/angular2'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-component',

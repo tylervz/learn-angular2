@@ -27,8 +27,8 @@ Let's start with a simple login form in HTML with Angular 2:
 And the corresponding component JS:
 
 ```javascript
-
-import {Component, FormBuilder, Validators} from 'angular2/angular2'
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/common';
 
 @Component({
   selector: 'login-page',
@@ -130,4 +130,3 @@ doLogin(event) {
   event.preventDefault();
 }
 ```
-
