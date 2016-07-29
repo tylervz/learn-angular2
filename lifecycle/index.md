@@ -49,7 +49,7 @@ to wait for our child components to initialize first.
 To do this, we can handle the `ngOnInit` lifecycle event. Optionally, we could call `setTimeout` in our constructor for a similar effect:
 
 ```javascript
-import {Component, bootstrap} from 'angular2/angular2';
+import {Component, bootstrap} from '@angular/core';
 
 // Annotation section
 @Component({
