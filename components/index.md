@@ -14,7 +14,7 @@ are combined into Components.
 
 ### A simple component
 
-Here's a simple Component that renders our name, and a button that triggers a method to print our name to the console:
+Here's a simple [Component](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html) that renders our name, and a button that triggers a method to print our name to the console:
 
 ```javascript
 {% raw %}
