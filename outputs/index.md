@@ -28,7 +28,7 @@ export class PersonInfo {
 Let's import `Output` and `EventEmitter` and create our new event
 
 ```javascript
-import { Component, Output, EventEmitter } from 'angular2/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'user-profile',
