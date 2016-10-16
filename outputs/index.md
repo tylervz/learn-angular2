@@ -14,20 +14,23 @@ If you want to bind to particular event, you can use the new [Event syntax](/eve
 To create a custom event, we can use the new `@Output` decorator. Take the following component:
 
 ```javascript
+{% raw %}
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'user-profile',
   template: '<div>Hi, my name is {{user.name}}</div>'
 })
-export class PersonInfo {
+export class UserProfile {
   constructor() {}
 }
+{% endraw %}
 ```
 
 Let's import `Output` and `EventEmitter` and create our new event
 
 ```javascript
+{% raw %}
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -43,15 +46,19 @@ export class UserProfile {
     this.userUpdated.emit(this.user);
   }
 }
+{% endraw %}
 ```
 
-Now when we used this component elsewhere in our app, we can bind the event that `person-info` emits
+Now when we used this component elsewhere in our app, we can bind the event that `user-profile` emits
 
 ```html
+{% raw %}
   <user-profile (userUpdated)="userUpdated($event)"></user-profile>
+{% endraw %}
 ```
 
 ```javascript
+{% raw %}
 export class SettingsPage {
   constructor(){}
 
@@ -59,4 +66,5 @@ export class SettingsPage {
     // Handle the event
   }
 }
+{% endraw %}
 ```
