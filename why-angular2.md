@@ -12,7 +12,7 @@ When Angular 2 was announced in October 2014 at the ngEurope conference, the ngC
 framework they invested so much time into learning and building real things with? A lot of Angular developers
 were worried that Angular 2 would spell the end for Angular.
 
-Few teams are as invested in Angular as the [Ionic SDK](http://ionicframework.com/) team is. We've spent
+Few teams are as invested in Angular as the [Ionic](http://ionicframework.com/) team is. We've spent
 years building our entire business on Angular. When Angular 2 was announced, we were also concerned that the next version of our favorite framework would negatively impact us.
 
 What we found when we started building with Angular 2, though, was something beyond our wildest dreams: a faster, more powerful, cleaner, and easier to use tool than we had with Angular 1. We found a tool that embraced future web standards and brought ES6 to more developers around the world.
@@ -31,4 +31,3 @@ We hope you find Angular 2 as inspiring as we have, and we hope this guide helps
 Cheers!<br>
 *[Max Lynch](http://twitter.com/maxlynch)*<br>
 *Co-creator of Ionic*<br>
-*May 2015*
