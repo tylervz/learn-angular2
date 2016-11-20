@@ -5,10 +5,6 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/outputs/inde
 tweet: "Emit your own crazy events with Outputs in Angular 2"
 ---
 
-
-_Updated April 14, 2016_
-
-
 If you want to bind to particular event, you can use the new [Event syntax](/events) in Angular 2, but what if you need your own custom event?
 
 To create a custom event, we can use the new `@Output` decorator. Take the following component:

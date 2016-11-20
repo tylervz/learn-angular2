@@ -5,9 +5,6 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/inputs/index
 tweet: "Learn input properties in Angular 2"
 ---
 
-
-_Updated April 14, 2016_
-
 Components are the core of an Angular 2 app but most developers need to know how to pass data into components to dynamically configure them.
 
 #### `@Input`

@@ -5,8 +5,6 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/components/i
 tweet: "How to use components in Angular 2"
 ---
 
-_Updated November 16, 2015_
-
 In Angular 2, Components are the main way we build and specify elements and logic on the page.
 
 In Angular 1, we achieved this through directives, controllers, and scope. In Angular 2, all those concepts

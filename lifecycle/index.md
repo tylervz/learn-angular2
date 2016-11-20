@@ -5,8 +5,6 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/lifecycle/in
 tweet: "Lifecycle of an Angular 2 App"
 ---
 
-_Updated November 16, 2015_
-
 Angular apps go through a multi-stage bootstrap and lifecycle process, and we can
 respond to various events as our app starts, runs, and creates/destroys components.
 
