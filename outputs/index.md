@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
   selector: 'user-profile',
   template: '<div>Hi, my name is {{user.name}}</div>'
 })
-export class PersonInfo {
+export class UserProfile {
   constructor() {}
 }
 ```
