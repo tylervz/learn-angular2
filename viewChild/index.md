@@ -6,13 +6,13 @@ tweet: "Access child components in Angular 2"
 ---
 
 
-_Updated April 28, 2016_
+_Updated November 20, 2016_
 
-Since all components in Angular 2 have classes, you might want to call methods on these classes. This requires access to the component.
+Child components in our view can be accessed from our parent component easily with `@ViewChild`.
 
 #### `@ViewChild`
 
-To get access to a component and its methods, we can use the `@ViewChild` annotation.
+To get access to a component and its methods, we can use the `@ViewChild` decorator.
 
 For example, our `<user-profile>` component can have a method called `sendData()`.
 
@@ -25,14 +25,14 @@ For example, our `<user-profile>` component can have a method called `sendData()
 
 export class UserProfile {
   constructor() {}
-  sendData(){
+  sendData() {
     //send data
   }
 }
 {% endraw %}
 ```
 
-When use the `user-profile` on our main page, we can reference the class and then assign it to a local property
+When use the `user-profile` on our parent component, we can reference the `UserProfile` component class and then assign it to a local property:
 
 ```javascript
 {% raw %}
@@ -41,16 +41,20 @@ import { UserProfile } from '../user-profile';
 
 @Component({
   template: '<user-profile (click)="update()"></user-profile>',
-  directives: [UserProfile]
 })
 export class MasterPage {
-  // we pass the Component we want to get
-  // assign to a public property on our class
-  // give it the type for our component
+  // ViewChild takes a class type or a reference name string.
+  // Here we are using the type
   @ViewChild(UserProfile) userProfile: UserProfile
 
   constructor() { }
-  update(){
+
+  ngAfterViewInit() { 
+    // After the view is initialized, this.userProfile will be available
+    this.update();
+  }
+
+  update() {
     this.userProfile.sendData();
   }
 }
