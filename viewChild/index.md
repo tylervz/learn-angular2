@@ -5,9 +5,6 @@ edit_link: https://github.com/driftyco/learn-angular2/edit/gh-pages/viewChild/in
 tweet: "Access child components in Angular 2"
 ---
 
-
-_Updated November 20, 2016_
-
 Child components in our view can be accessed from our parent component easily with `@ViewChild`.
 
 #### `@ViewChild`
@@ -49,7 +46,7 @@ export class MasterPage {
 
   constructor() { }
 
-  ngAfterViewInit() { 
+  ngAfterViewInit() {
     // After the view is initialized, this.userProfile will be available
     this.update();
   }
@@ -71,8 +68,7 @@ import { Component, ViewChild } from '@angular/core';
 import { UserProfile } from '../user-profile';
 
 @Component({
-  template: '<user-profile #myProfile (click)="update()"></user-profile>',
-  directives: [UserProfile]
+  template: '<user-profile #myProfile (click)="update()"></user-profile>'
 })
 export class MasterPage {
   @ViewChild('myProfile') userProfile: UserProfile
