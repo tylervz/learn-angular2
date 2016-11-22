@@ -16,6 +16,7 @@ While it feels like more code to write, in practice it's easier to reason about 
 Let's start with a simple login form in HTML with Angular 2.
 
 App Module:
+
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -41,6 +42,7 @@ export class AppModule { }
 ```
 
 Template:
+
 ```html
 <form [ngFormModel]="loginForm" (ngSubmit)="doLogin($event)">
     <input formControlName="email" type="email" placeholder="Your email">
@@ -50,6 +52,7 @@ Template:
 ```
 
 Component Class:
+
 ```javascript
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
