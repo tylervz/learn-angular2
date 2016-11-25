@@ -20,7 +20,7 @@ to browser vendors are eager to use and implement new JS features faster than th
 organization can approve them.
 
 JavaScript as browsers understand it is a bit like the "assembly of the web," meaning that it
-can correctly run code that was implemented in a higher level language and "compiled" down
+can correctly run code that was implemented in a higher level language and "transpiled" down
 to JS the browser understands.
 
 That is exactly what CoffeeScript was, which was one of the first very successful higher-level JS languages. A developer
