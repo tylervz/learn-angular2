@@ -49,7 +49,7 @@ Now when we used this component elsewhere in our app, we can bind the event that
 
 ```html
 {% raw %}
-  <user-profile (userUpdated)="userUpdated($event)"></user-profile>
+  <user-profile (userUpdated)="handleUserUpdated($event)"></user-profile>
 {% endraw %}
 ```
 
@@ -58,7 +58,7 @@ Now when we used this component elsewhere in our app, we can bind the event that
 export class SettingsPage {
   constructor(){}
 
-  userUpdated(user) {
+  handleUserUpdated(user) {
     // Handle the event
   }
 }
