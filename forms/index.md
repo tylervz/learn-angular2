@@ -46,7 +46,7 @@ Template:
 ```html
 <form [ngFormModel]="loginForm" (ngSubmit)="doLogin($event)">
     <input formControlName="email" type="email" placeholder="Your email">
-    <input formContControl="password" type="password" placeholder="Your password">
+    <input formControlName="password" type="password" placeholder="Your password">
   <button type="submit">Log in</button>
 </form>
 ```
