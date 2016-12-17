@@ -113,7 +113,7 @@ In practice though, the `FormBuilder` is what we will use to quickly create form
 
 ## Form Directives
 
-You'll notice the lack of `ngModel` anywhere in our form. Instead, we have the `formControlName` directies that map certain inputs to our control objects:
+You'll notice the lack of `ngModel` anywhere in our form. Instead, we have the `formControlName` directives that map certain inputs to our control objects:
 
 ```html
   <input formControlName="email" type="email" placeholder="Your email">
