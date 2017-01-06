@@ -44,7 +44,7 @@ export class AppModule { }
 Template:
 
 ```html
-<form [ngFormModel]="loginForm" (ngSubmit)="doLogin($event)">
+<form [formGroup]="loginForm" (ngSubmit)="doLogin($event)">
     <input formControlName="email" type="email" placeholder="Your email">
     <input formControlName="password" type="password" placeholder="Your password">
   <button type="submit">Log in</button>
