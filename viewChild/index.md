@@ -13,7 +13,7 @@ To get access to a component and its methods, we can use the `@ViewChild` decora
 
 For example, our `<user-profile>` component can have a method called `sendData()`.
 
-
+<h3>child.component.ts</h3>
 ```javascript
 {% raw %}
 @Component({
@@ -30,7 +30,7 @@ export class UserProfile {
 ```
 
 When use the `user-profile` on our parent component, we can reference the `UserProfile` component class and then assign it to a local property:
-
+<h3>parent.component.ts</h3>
 ```javascript
 {% raw %}
 import { Component, ViewChild } from '@angular/core';
@@ -61,7 +61,7 @@ export class MasterPage {
 
 We can also do the same thing with a local variable.
 Instead of trying to load the particular class, we can do:
-
+<h3>parent.component.ts</h3>
 ```javascript
 {% raw %}
 import { Component, ViewChild } from '@angular/core';
