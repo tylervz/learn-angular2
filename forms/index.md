@@ -20,7 +20,7 @@ App Module:
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// We need to import the ReactiveFormsModule and import it
+// We need to import the ReactiveFormsModule and HttpModule
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
