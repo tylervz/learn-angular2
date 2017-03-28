@@ -11,13 +11,18 @@ In Angular 2, "everything is a component." Components are the main way we build 
 
 Here's a simple [Component](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html) that renders our name, and a button that triggers a method to print our name to the console:
 
+<h5>app.component.ts</h5>
 ```javascript
 {% raw %}
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-component',
-  template: '<div>Hello my name is {{name}}. <button (click)="sayMyName()">Say my name</button></div>'
+  template: `
+    <div>Hello my name is {{name}}. 
+      <button (click)="sayMyName()">Say my name</button>
+    </div>
+   `
 })
 export class MyComponent {
   constructor() {
