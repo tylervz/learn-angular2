@@ -25,6 +25,7 @@ import { Component } from '@angular/core';
    `
 })
 export class MyComponent {
+  name: string;
   constructor() {
     this.name = 'Max'
   }
