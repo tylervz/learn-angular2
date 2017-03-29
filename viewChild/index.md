@@ -29,7 +29,7 @@ export class UserProfile {
 {% endraw %}
 ```
 
-When use the `user-profile` on our parent component, we can reference the `UserProfile` component class and then assign it to a local property:
+When we use the `user-profile` in our parent component, we can reference the `UserProfile` component class and then assign it to a local property:
 <h5>parent.component.ts</h5>
 ```javascript
 {% raw %}
